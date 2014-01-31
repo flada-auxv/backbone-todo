@@ -19,3 +19,4 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-haml');
+  grunt.loadNpmTasks('grunt-contrib-watch');

@@ -26,5 +26,8 @@
     "backbone": {
       "js": "**/*.js"
     }
+  },
+  "devDependencies": {
+    "todomvc-common": "~0.1.9"
   }
 }
