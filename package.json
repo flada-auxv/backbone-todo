@@ -3,7 +3,9 @@
     "grunt": "~0.4.2",
     "grunt-bower-task": "~0.3.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-haml": "~0.8.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
