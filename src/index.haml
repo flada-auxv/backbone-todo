@@ -1,6 +1,48 @@
 !!!
 %html
   %head
-    %title
+    %title Backbone.js • TodoMV
+    %link(rel="stylesheet" href="bower_components/todomvc-common/base.css")
   %body
-    %h1 hi
+    %section#todoapp
+      %header#header
+        %h1 todos
+        %input#new-todo(placeholder="what needs to be done?" autofocus="autofocus")
+      %section.main
+        %input#toggle-all(type="checkbox")
+        %label(for="toggle-all")Mark all as complete
+        %ul#todo-list
+      %footer#footer
+    %footer#info
+      %p Double-click to edit a todo
+      %p Written by &nbsp;
+        %a(href="http://github.com/addyosmani") Addy Osmani
+      %p Part of &nbsp;
+        %a(href="http://todomvc.com") TodoMVC
+    %script#item-template(type="text/template")
+      .view
+        %input.toggle(type="checkbox" completed ? "checked" : "")
+        %lable {{ title }}
+        %button.destroy
+      -# %input.edit(value={{ title }})
+      <input class="edit" value={{ title }}>
+    %script#stats-template(type="text/template")
+      %span#todo-count
+        %strong {{ remaining }}
+          {{ remaining === 1 ? "item" : "items" }} left
+
+      %ul#filters
+        %li
+          %a.selected(href="#/") All
+        %li
+          %a(href="#/active") Active
+        %li
+          %a(href="#/completed") Completed
+      {{ if (completed) { }}
+        %button#clear-completed Clear completed ({{ completed }})
+      {{ } }}
+    %script(src="bower_components/todomvc-common/base.js")
+    %script(src="bower_components/jquery/jquery.js")
+    %script(src="bower_components/underscore/underscore.js")
+    %script(src="bower_components/backbone/backbone.js")
+    %script(src="bower_components/backbone.localStorage/backbone.localStorage.js")
