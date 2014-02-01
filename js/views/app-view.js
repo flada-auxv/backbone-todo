@@ -70,7 +70,7 @@ app = app || {};
     },
     createOnEnter: function(e) {
       if (e.which === ENTER_KEY && this.$input.val().trim()) {
-        app.todos.create(this.newAttributes);
+        app.todos.create(this.newAttributes());
         return this.$input.val('');
       }
     },

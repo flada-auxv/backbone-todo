@@ -68,7 +68,7 @@ do ($) ->
 
     createOnEnter: (e) ->
       if e.which == ENTER_KEY && @$input.val().trim()
-        app.todos.create @newAttributes
+        app.todos.create @newAttributes()
         @$input.val ''
 
     createCompleted: ->
