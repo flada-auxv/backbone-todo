@@ -21,10 +21,10 @@
   },
   "exportsOverride": {
     "underscore": {
-      "js": "**/*.js"
+      "js": "underscore.js"
     },
     "backbone": {
-      "js": "**/*.js"
+      "js": "backbone.js"
     }
   },
   "devDependencies": {
