@@ -75,7 +75,7 @@ app = app || {};
       }
     },
     clearCompleted: function() {
-      _.invoke(app.todos.completed, 'destroy');
+      _.invoke(app.todos.completed(), 'destroy');
       return false;
     },
     toggleAllComplete: function() {

@@ -72,7 +72,7 @@ do ($) ->
         @$input.val ''
 
     clearCompleted: ->
-      _.invoke(app.todos.completed, 'destroy')
+      _.invoke(app.todos.completed(), 'destroy')
       false
 
     toggleAllComplete: ->
