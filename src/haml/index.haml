@@ -2,7 +2,7 @@
 %html
   %head
     %title Backbone.js • TodoMV
-    %link(rel="stylesheet" href="bower_components/todomvc-common/base.css")
+    %link(rel="stylesheet" href="/lib/todomvc-common/base.css")
   %body
     %section#todoapp
       %header#header
@@ -30,7 +30,6 @@
       %span#todo-count
         %strong {{ remaining }}
           {{ remaining === 1 ? "item" : "items" }} left
-
       %ul#filters
         %li
           %a.selected(href="#/") All
@@ -41,8 +40,14 @@
       {{ if (completed) { }}
         %button#clear-completed Clear completed ({{ completed }})
       {{ } }}
-    %script(src="bower_components/todomvc-common/base.js")
-    %script(src="bower_components/jquery/jquery.js")
-    %script(src="bower_components/underscore/underscore.js")
-    %script(src="bower_components/backbone/backbone.js")
-    %script(src="bower_components/backbone.localStorage/backbone.localStorage.js")
+    -# %script(src="/lib/todomvc-common/base.js")
+    %script(src="/lib/jquery/jquery.js")
+    %script(src="/lib/js/underscore/underscore.js")
+    %script(src="/lib/js//backbone/backbone.js")
+    %script(src="/lib/backbone.localStorage/backbone.localStorage.js")
+    %script(src="/js/models/todo.js")
+    %script(src="/js/collections/todos.js")
+    %script(src="/js/views/app-view.js")
+    %script(src="/js/views/todo-view.js")
+    %script(src="/js/routers/router.js")
+    %script(src="/js/app.js")
