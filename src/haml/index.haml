@@ -22,14 +22,13 @@
     %script#item-template(type="text/template")
       .view
         %input.toggle(type="checkbox" completed ? "checked" : "")
-        %lable {{ title }}
+        %lable {{- title }}
         %button.destroy
-      -# %input.edit(value={{ title }})
-      <input class="edit" value={{ title }}>
+      <input class="edit" value={{- title }}>
     %script#stats-template(type="text/template")
       %span#todo-count
-        %strong {{ remaining }}
-          {{ remaining === 1 ? "item" : "items" }} left
+        %strong {{= remaining }}
+          {{= remaining === 1 ? "item" : "items" }} left
       %ul#filters
         %li
           %a.selected(href="#/") All
@@ -38,7 +37,7 @@
         %li
           %a(href="#/completed") Completed
       {{ if (completed) { }}
-        %button#clear-completed Clear completed ({{ completed }})
+        %button#clear-completed Clear completed ({{= completed }})
       {{ } }}
     -# %script(src="/lib/todomvc-common/base.js")
     %script(src="./lib/jquery/jquery.js")
