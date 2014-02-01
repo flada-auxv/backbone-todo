@@ -74,7 +74,7 @@ app = app || {};
         return this.$input.val('');
       }
     },
-    createCompleted: function() {
+    clearCompleted: function() {
       _.invoke(app.todos.completed, 'destroy');
       return false;
     },

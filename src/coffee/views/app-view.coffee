@@ -71,7 +71,7 @@ do ($) ->
         app.todos.create @newAttributes()
         @$input.val ''
 
-    createCompleted: ->
+    clearCompleted: ->
       _.invoke(app.todos.completed, 'destroy')
       false
 
