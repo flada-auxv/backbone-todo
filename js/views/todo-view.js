@@ -35,7 +35,7 @@ app = app || {};
     isHidden: function() {
       var isCompleted;
       isCompleted = this.model.get('completed');
-      return (isCompleted && app.TodoFilter === 'completed') || (isCompleted && app.TodoFilter === 'active');
+      return (!isCompleted && app.TodoFilter === 'completed') || (isCompleted && app.TodoFilter === 'active');
     },
     toggleCompleted: function() {
       return this.model.toggle();

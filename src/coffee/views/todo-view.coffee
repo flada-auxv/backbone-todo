@@ -32,7 +32,7 @@ do ($) ->
     isHidden: ->
       isCompleted = @model.get('completed')
 
-      (isCompleted && app.TodoFilter == 'completed') ||
+      (!isCompleted && app.TodoFilter == 'completed') ||
       (isCompleted && app.TodoFilter == 'active')
 
     toggleCompleted: ->
