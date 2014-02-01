@@ -27,7 +27,7 @@ do ($) ->
       @
 
     toggleVisible: ->
-      @$el.toggleclass('hidden', @isHidden())
+      @$el.toggleClass('hidden', @isHidden())
 
     isHidden: ->
       isCompleted = @model.get('completed')

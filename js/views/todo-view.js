@@ -30,7 +30,7 @@ app = app || {};
       return this;
     },
     toggleVisible: function() {
-      return this.$el.toggleclass('hidden', this.isHidden());
+      return this.$el.toggleClass('hidden', this.isHidden());
     },
     isHidden: function() {
       var isCompleted;
