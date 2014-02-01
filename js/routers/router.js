@@ -10,7 +10,7 @@ app = app || {};
     },
     setFilter: function(param) {
       app.TodoFilter = param || '';
-      return app.todos.trigger('filtter');
+      return app.todos.trigger('filter');
     }
   });
   app.TodoRouter = new TodoRouter();

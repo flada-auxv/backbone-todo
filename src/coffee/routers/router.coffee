@@ -8,7 +8,7 @@ do ->
     setFilter: (param) ->
       app.TodoFilter = param || ''
 
-      app.todos.trigger('filtter')
+      app.todos.trigger('filter')
 
   app.TodoRouter = new TodoRouter()
   Backbone.history.start()
