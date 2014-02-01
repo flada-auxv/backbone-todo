@@ -26,11 +26,11 @@ do ($) ->
 
     render: ->
       completed = app.todos.completed().length
-      remaining = app.todos.remaining.length
+      remaining = app.todos.remaining().length
 
       if app.todos.length
-        @$main.show
-        @$footer.show
+        @$main.show()
+        @$footer.show()
 
         @$footer.html @statsTemplate
           completed: completed

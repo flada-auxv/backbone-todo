@@ -29,10 +29,10 @@ app = app || {};
     render: function() {
       var completed, remaining;
       completed = app.todos.completed().length;
-      remaining = app.todos.remaining.length;
+      remaining = app.todos.remaining().length;
       if (app.todos.length) {
-        this.$main.show;
-        this.$footer.show;
+        this.$main.show();
+        this.$footer.show();
         this.$footer.html(this.statsTemplate({
           completed: completed,
           remaining: remaining
