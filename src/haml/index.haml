@@ -22,7 +22,7 @@
     %script#item-template(type="text/template")
       .view
         <input class="toggle" type="checkbox" {{= completed ? 'checked' : '' }}>
-        %lable {{- title }}
+        %label {{- title }}
         %button.destroy
       <input class="edit" value={{- title }}>
     %script#stats-template(type="text/template")
